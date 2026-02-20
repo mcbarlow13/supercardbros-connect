@@ -13,9 +13,7 @@
       --text:#fff;
       --muted:rgba(255,255,255,.75);
       --red:#ff1e1e;
-      --red2:#b00000;
       --card:rgba(255,255,255,.04);
-      --card2:rgba(255,255,255,.06);
       --shadow: 0 0 18px rgba(255,30,30,.35), 0 0 42px rgba(255,30,30,.12);
       --shadow-strong: 0 0 26px rgba(255,30,30,.55), 0 0 70px rgba(255,30,30,.18);
       --radius:18px;
@@ -57,7 +55,7 @@
       overflow:hidden;
     }
 
-    /* subtle “energy” lines (Pokémon vibe but minimal) */
+    /* subtle “energy” lines */
     .panel::before{
       content:"";
       position:absolute;
@@ -100,7 +98,6 @@
       font-size: 30px;
       margin: 0 0 6px;
       letter-spacing:.5px;
-      text-transform: none;
       text-shadow: 0 0 18px rgba(255,30,30,.18);
     }
 
@@ -224,7 +221,6 @@
       border-bottom-color: rgba(255,30,30,.70);
     }
 
-    /* Optional “minimal mode” toggle styles */
     .toggleRow{
       display:flex;
       align-items:center;
@@ -246,7 +242,6 @@
       box-shadow: 0 0 14px rgba(255,30,30,.14);
     }
 
-    .minimal body{}
     .minimal .panel::before{ display:none; }
     .minimal .mantra{ display:none; }
   </style>
@@ -257,7 +252,6 @@
     <main class="container">
       <section class="panel" id="panel">
         <header class="header">
-          <!-- Put your logo file in the same folder and name it: logo.png OR change src below -->
           <div class="logo">
             <img src="logo.png" alt="SuperCardBros logo" />
           </div>
@@ -272,8 +266,7 @@
         </header>
 
         <div class="buttons">
-          <!-- Update these links -->
-          <a class="btn" href="YOUR_TIKTOK_LINK_HERE" target="_blank" rel="noopener">
+          <a class="btn" href="https://www.tiktok.com/@supercardbros_" target="_blank" rel="noopener">
             <div class="left">
               <div class="icon">TT</div>
               <div class="label">
@@ -284,7 +277,7 @@
             <div class="arrow">›</div>
           </a>
 
-          <a class="btn" href="YOUR_INSTAGRAM_LINK_HERE" target="_blank" rel="noopener">
+          <a class="btn" href="https://www.instagram.com/supercardbros_/" target="_blank" rel="noopener">
             <div class="left">
               <div class="icon">IG</div>
               <div class="label">
@@ -295,7 +288,18 @@
             <div class="arrow">›</div>
           </a>
 
-          <a class="btn" href="YOUR_EBAY_LINK_HERE" target="_blank" rel="noopener">
+          <a class="btn" href="https://www.youtube.com/@supercardbro4380" target="_blank" rel="noopener">
+            <div class="left">
+              <div class="icon">YT</div>
+              <div class="label">
+                <strong>YouTube</strong>
+                <span>Longer videos + shorts</span>
+              </div>
+            </div>
+            <div class="arrow">›</div>
+          </a>
+
+          <a class="btn" href="https://www.ebay.com/usr/supercardbro" target="_blank" rel="noopener">
             <div class="left">
               <div class="icon">eB</div>
               <div class="label">
@@ -306,7 +310,7 @@
             <div class="arrow">›</div>
           </a>
 
-          <a class="btn" href="YOUR_FACEBOOK_LINK_HERE" target="_blank" rel="noopener">
+          <a class="btn" href="https://www.facebook.com/profile.php?id=100068762896002" target="_blank" rel="noopener">
             <div class="left">
               <div class="icon">FB</div>
               <div class="label">
@@ -316,36 +320,20 @@
             </div>
             <div class="arrow">›</div>
           </a>
-
-          <!-- Optional contact button (recommended once you create a brand email) -->
-          <!--
-          <a class="btn" href="mailto:supercardbros@email.com">
-            <div class="left">
-              <div class="icon">@</div>
-              <div class="label">
-                <strong>Email</strong>
-                <span>Collabs • questions • sales</span>
-              </div>
-            </div>
-            <div class="arrow">›</div>
-          </a>
-          -->
         </div>
 
         <div class="footer">
-          Tip: save this page as <strong>/connect</strong> so your QR always points to one place.<br/>
-          Want trades/collabs? Add a brand email later.
+          Tip: later, you can buy a domain and point it to this page (ex: <strong>/connect</strong>) so your QR never changes.
         </div>
       </section>
     </main>
   </div>
 
   <script>
-    // Minimal / Energy toggle
     const panel = document.getElementById('panel');
     const toggle = document.getElementById('toggle');
-
     let minimal = false;
+
     toggle.addEventListener('click', () => {
       minimal = !minimal;
       panel.classList.toggle('minimal', minimal);
